@@ -21,9 +21,19 @@ class Scanner extends Component {
         },
         numOfWorkers: 4,
         decoder: {
-            readers : [ "code_128_reader"]
+          readers : [
+            "ean_reader",
+          ]
         },
-        locate: true
+      debug: {
+        drawBoundingBox: true,
+        showFrequency: true,
+        drawScanline: true,
+        showPattern: true
+      },
+      multiple: false,
+      locate: true,
+      debug: true
     }, function(err) {
         if (err) {
             return console.log(err);
